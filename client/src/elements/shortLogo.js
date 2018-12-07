@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-
-
 const Wrapper = styled.div`
   width: 25%;
   height: 25%;
@@ -17,7 +15,7 @@ const Image = styled.img`
 
 const ShowLogo = props => (
   <Wrapper>
-    <Image src='/assets/THSM-Logo2.png'/>
+    <Image url='./assets/THSM-Logo2.png'/>
   </Wrapper>
 )
 
