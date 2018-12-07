@@ -27,7 +27,7 @@ body {
 
 main {
   text-align: center;
-  background-image: url('./assets/Poster.png');
+  background-image: url('/assets/Poster.png');
   background-size: cover;
   background-repeat: no-repeat;
   opacity: .85;

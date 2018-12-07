@@ -17,7 +17,7 @@ const Image = styled.img`
 
 const ShowLogo = props => (
   <Wrapper>
-    <Image src='/assets/THSM_Full.png'/>
+    <Image src='../assets/THSM_Full.png'/>
   </Wrapper>
 )
 
