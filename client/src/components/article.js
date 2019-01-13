@@ -8,8 +8,13 @@ export default class article extends Component{
         display: 'flex'
       },
       header:{
-        marginLeft: '2%'
-      }
+        marginLeft: '2%',
+        alignSelf: 'center'
+      },
+      link:{
+        textDecoration: 'none'
+      },
+
     }
 
     return(
@@ -25,6 +30,7 @@ export default class article extends Component{
         </div>
       </div>
       <p>{this.props.content}</p>
+      <a style={styles.link} href={this.props.srcLink}><span style={{color:'grey', alignSelf:'flex-end'}}>Read More</span></a>
       </article>
       // </div>
     )
