@@ -86,17 +86,17 @@ class App extends Component {
         name: 'Main'
       },
       {
-        class: 'about',
-        name: 'About'
-      },
-      {
         class: 'shop',
         name: 'Shop'
       },
       {
-        class: 'gigs',
-        name: 'Gigs'
+        class: 'about',
+        name: 'About'
       },
+      // {
+      //   class: 'gigs',
+      //   name: 'Gigs'
+      // },
     ]
 
     return (

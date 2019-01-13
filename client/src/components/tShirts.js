@@ -23,7 +23,10 @@ export default class TShirt extends Component {
     ]
     return (
       <div className="shop" name="shop">
-        <div className="ShirtGrid">{this.getBoxes(shirts)}</div>
+        <div className="ShirtGrid">
+      <h1 style={{color:'white', textAlign:'left', marginLeft: '10%'}}>Merch</h1>
+        {this.getBoxes(shirts)}
+        </div>
       </div>
     );
   }
