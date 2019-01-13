@@ -7,11 +7,6 @@ export default class TShirt extends Component {
     return shirtsArr.map((i,k)=>{
       return <TCard shirt={i.file} id={i.id} />
     })
-    // let myArr = [];
-    // for (let i = 0; i < 2; i++) {
-    //   myArr.push(<TCard shirt={i+1}/>);
-    // }
-    // return myArr;
   }
   render() {
     const shirts = [

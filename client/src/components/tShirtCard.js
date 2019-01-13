@@ -3,13 +3,6 @@ import PayPal from './paypalButton'
 
 export default class TshirtCard extends Component {
 
-
-  // componentDidMount() {
-  //   fetch('/img/tShirt1.png')
-  //     .then(res => res.json())
-  //     .then(users => this.setState({ users }));
-  // }
-
   render() {
     return (
       <div className="CardGrid">
