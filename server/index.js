@@ -9,7 +9,7 @@ app.use(parser.json())
 app.use(express.static('public'))
 //Input routes here
 app.get("/",(req,res)=>{
-  res.render('index')
+  res.render('/index')
 })
 
-app.listen(3001, () => console.log('Listening on port 3001!'))
+app.listen(process.env.PORT || 3001, () => console.log('Listening on port 3001!'))
