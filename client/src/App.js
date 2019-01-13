@@ -4,8 +4,10 @@ import Nav from './components/nav'
 import Video from './components/media'
 import Page from './components/page'
 import CSSBaseline from '@material-ui/core/CssBaseline'
-import Logo from './elements/shortLogo'
+// import Logo from './elements/shortLogo'
 import FullName from './elements/logo'
+import TShirt from "./components/tShirts";
+
 
 
 
@@ -37,24 +39,47 @@ class App extends Component {
   }
 
   renderPages=(pageArr)=> {
-    if (pageArr){
-      return (pageArr.map((i,k)=>{
-        return i.name !== "Main"
-        ? (
-          <Page 
+    return pageArr.map((i,k)=>{
+
+      switch (i.name) {
+        case 'About':
+          return <Page 
             height={this.state.height} 
             width={this.state.width}
             name={i.class}
+            key={k}  
           />
-        )
-        : null
-      })
-    )}
+          // break;
+        case 'Gigs':
+         return <Page 
+          height={this.state.height} 
+          width={this.state.width}
+          name={i.class}
+          key={k}
+        />
+        // break;
+        case 'Shop':
+        return <TShirt/>
+        // break;
+    }})
+    
+    // if (pageArr){
+    //   return (pageArr.map((i,k)=>{
+    //     return i.name !== "Main"
+    //     ? (
+    //       <Page 
+    //         height={this.state.height} 
+    //         width={this.state.width}
+    //         name={i.class}
+    //         key={k}
+    //       />
+    //     )
+    //     : null
+    //   })
+    // )}
   }
 
   render() {
-    console.log(this.props)
-    const { height, width } = this.state
     const sectionsObj = [ 
       {
         class: 'main',
