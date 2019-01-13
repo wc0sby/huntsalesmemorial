@@ -15,8 +15,7 @@
     "server": "nodemon server/index.js",
     "client": "cd client && npm start && cd..",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild":
-      "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client && npm install --prefix server"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client && npm install --prefix server"
   },
   "repository": {
     "type": "git",
@@ -27,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/wc0sby/huntsalesmemorial/issues"
   },
-  "homepage": "https://github.com/wc0sby/huntsalesmemorial#readme"
+  "homepage": "https://github.com/wc0sby/huntsalesmemorial#readme",
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
 }
