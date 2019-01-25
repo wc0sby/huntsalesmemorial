@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Article from './article'
 import articleText from '../articleText'
+import HuntShot from '../assets/Hunt urinal shot.JPG'
 // import { Link, animateScroll as Scroll } from 'react-scroll'
 // import text from '../about'
 
@@ -53,7 +54,7 @@ class About extends Component{
           <div className={classes.container}>
           <h1 style={{color:'white', textAlign:'left'}}>{name.toUpperCase()}</h1>
           <div style={styles.flexContainer}>
-            <img style={{maxHeight:height*.60, transform: 'Rotate(-10deg)', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}} src="/assets/Hunt Urinal Shot.JPG" alt=""/>
+            <img style={{maxHeight:height*.60, transform: 'Rotate(-10deg)', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}} src={HuntShot} alt=""/>
             <div style={{maxHeight:600, overflow:'auto'}}>
               {renderArticles(articleText, classes)}
             </div>
