@@ -1,32 +1,32 @@
 {
   "name": "thehuntsales",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint server",
-    "api-dev": "nodemon --exec \"babel-node server/index\"",
-    "test": "npm run lint",
-    "dev": "nf start",
-    "build-client": "cd client && npm run build",
-    "clean-assets": "rm -rf ./public/*",
-    "copy-assets": "mkdir -p ./public && cp -R ./client/build/* ./public",
-    "compile-server": "rm -rf ./dist && babel server --out-dir dist",
-    "pre-deploy": "npm run compile-server && npm run build-client && npm run clean-assets && npm run copy-assets",
-    "start": "cd client && npm i && cd .. && cd server && npm i && cd .. && node server/index",
-    "client": "cd client && npm start && cd .."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wc0sby/huntsalesmemorial.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/wc0sby/huntsalesmemorial/issues"
-  },
-  "homepage": "https://github.com/wc0sby/huntsalesmemorial#readme",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://wc0sby.github.io/huntsalesmemorial",
   "dependencies": {
-    "concurrently": "^4.1.0"
-  }
+    "@material-ui/core": "^3.6.1",
+    "gh-pages": "^2.0.1",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-scripts": "2.1.1",
+    "react-scroll": "^1.7.10",
+    "styled-components": "^4.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
