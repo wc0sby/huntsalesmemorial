@@ -7,7 +7,7 @@ import CSSBaseline from '@material-ui/core/CssBaseline'
 // import Logo from './elements/shortLogo'
 import FullName from './elements/logo'
 import TShirt from "./components/tShirts";
-
+import './assets/Poster.png'
 
 
 
