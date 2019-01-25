@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import TCard from "./tShirtCard";
 import './tShirts.css';
+import Shirt1 from '../assets/tshirt1.png'
+import Shirt2 from '../assets/tshirt2.png'
 
 export default class TShirt extends Component {
   getBoxes(shirtsArr) {
@@ -13,12 +15,12 @@ export default class TShirt extends Component {
       {
       id: 'YSHH2QY6YD532',
       color: 'black',
-      file: 'tshirt1'
+      file: Shirt1
       },
       {
        id: 'AB5FMA9A5KRCA',
        color: 'red',
-       file: 'tshirt2' 
+       file: Shirt2
       }
     ]
     return (

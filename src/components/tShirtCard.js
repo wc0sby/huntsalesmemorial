@@ -8,7 +8,7 @@ export default class TshirtCard extends Component {
       <div className="CardGrid">
         <div className="ShirtImg">
           <img
-            src={`http://localhost:3000/assets/${this.props.shirt}.png`}
+            src={this.props.shirt}
             alt="test"
             style={{ width: "75%", height: '75%' }}
           />
