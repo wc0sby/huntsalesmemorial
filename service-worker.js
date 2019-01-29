@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/huntsalesmemorial/precache-manifest.a07961708a520305f534f68e2d31d140.js"
+  "/huntsalesmemorial/precache-manifest.782f7c495905bb37f387b2d14075521d.js"
 );
 
 workbox.clientsClaim();

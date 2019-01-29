@@ -8,6 +8,10 @@ self.__precacheManifest = [
     "url": "/huntsalesmemorial/static/media/tshirt1.d9ba81be.png"
   },
   {
+    "revision": "cbcb6514867797da1ef4e326c0346681",
+    "url": "/huntsalesmemorial/static/media/THSM_Full.cbcb6514.png"
+  },
+  {
     "revision": "d568c4e99830017b1869c9eade8ebe3e",
     "url": "/huntsalesmemorial/static/media/Poster.d568c4e9.png"
   },
@@ -20,19 +24,19 @@ self.__precacheManifest = [
     "url": "/huntsalesmemorial/static/js/runtime~main.f7462657.js"
   },
   {
-    "revision": "31a81d36b144a017f92b",
-    "url": "/huntsalesmemorial/static/js/main.31a81d36.chunk.js"
+    "revision": "ce60724626043fb47bce",
+    "url": "/huntsalesmemorial/static/js/main.ce607246.chunk.js"
   },
   {
-    "revision": "f2c2e8ec5b29382bc8b0",
-    "url": "/huntsalesmemorial/static/js/1.f2c2e8ec.chunk.js"
+    "revision": "6a009bf9f8b8abd61d0e",
+    "url": "/huntsalesmemorial/static/js/1.6a009bf9.chunk.js"
   },
   {
-    "revision": "31a81d36b144a017f92b",
-    "url": "/huntsalesmemorial/static/css/main.cc63a84a.chunk.css"
+    "revision": "ce60724626043fb47bce",
+    "url": "/huntsalesmemorial/static/css/main.5d98310a.chunk.css"
   },
   {
-    "revision": "89377a97da401db97219ff0c96f50448",
+    "revision": "36bc713768c38249799c607bbc8ff994",
     "url": "/huntsalesmemorial/index.html"
   }
 ];
