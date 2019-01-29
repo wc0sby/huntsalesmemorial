@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import logo from '../assets/THSM_Full.png'
 
 
 
@@ -17,7 +18,7 @@ const Image = styled.img`
 
 const ShowLogo = props => (
   <Wrapper>
-    <Image src='../assets/THSM_Full.png'/>
+    <Image src={logo}/>
   </Wrapper>
 )
 
