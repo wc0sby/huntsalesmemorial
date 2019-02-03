@@ -24,7 +24,7 @@ export default class TShirt extends Component {
       }
     ]
     return (
-      <div className="shop" name="shop">
+      <div className="merch" name="merch">
         <div className="ShirtGrid">
       <h1 style={{color:'white', textAlign:'left', marginLeft: '10%'}}>Merch</h1>
         {this.getBoxes(shirts)}

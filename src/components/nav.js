@@ -10,8 +10,8 @@ export default class Nav extends Component{
       return (<div 
           key={k} 
           href='#' 
-          style={{'textDecoration':'none', 'color': 'white'}}>
-            <Link activeClass="active" className={i.class} to={i.class} spy={true} smooth={true} duration={1600} >
+          style={{'textDecoration':'none', 'color': 'white', 'padding':'10% 0', 'paddingLeft':'5%'}}>
+            <Link activeClass="active" className={`${i.class}`} to={i.class} spy={true} smooth={true} duration={1600} >
               {i.name}
             </Link>
         </div>
@@ -24,14 +24,17 @@ export default class Nav extends Component{
     const { links } = this.props
     const styles = {
       main:{
-        'fontFamily': `Reenie Beanie, cursive`,
+        'fontFamily': `Didact Gothic, sans-serf`,
         'fontSize': '1.45em',
-        'width': '60%',
-        'opacity': '50%',
+        'width': '15%',
+        // 'opacity': '50%',
+        'height': '100%',
+        'background': 'rgba(0, 0, 0, 0.15)',
         'display': 'flex',
-        'justifyContent': 'space-around',
+        'flex-direction': 'column',
+        // 'justifyContent': 'space-between',
+        'align-content': 'flex-start',
         'position': 'fixed'
-
       },
     }
 

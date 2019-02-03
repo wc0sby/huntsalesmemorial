@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Nav from './components/nav'
-import Video from './components/media'
+// import Video from './components/media'
 import Page from './components/page'
 import CSSBaseline from '@material-ui/core/CssBaseline'
 // import Logo from './elements/shortLogo'
@@ -58,7 +58,7 @@ class App extends Component {
           key={k}
         />
         // break;
-        case 'Shop':
+        case 'Merch':
         return <TShirt/>
         // break;
     }})
@@ -86,13 +86,25 @@ class App extends Component {
         name: 'Main'
       },
       {
-        class: 'shop',
-        name: 'Shop'
+        class: 'main',
+        name: 'Videos'
       },
       {
-        class: 'about',
-        name: 'About'
+        class: 'main',
+        name: 'About '
       },
+      {
+        class: 'main',
+        name: 'Tours '
+      },
+      {
+        class: 'main',
+        name: 'Shop '
+      },
+      // {
+      //   class: 'merch',
+      //   name: 'Merch'
+      // },
       // {
       //   class: 'gigs',
       //   name: 'Gigs'
@@ -108,10 +120,12 @@ class App extends Component {
                 {/* <Logo/>  */}
                 <FullName/> 
                 <Nav links={sectionsObj}/>
-                <Video />
+                {/* <Video /> */}
               </header>
               {/* Render all pages relating to links */}
+              <section className="App-container">
               {this.renderPages(sectionsObj)}
+              </section>
 
             </main>
           </div>

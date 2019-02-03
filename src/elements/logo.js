@@ -5,10 +5,12 @@ import logo from '../assets/THSM_Full.png'
 
 
 const Wrapper = styled.div`
-  width: 32%;
-  height: 55%;
+  width: 42%;
+  height: 65%;
   bottom: 2%;
-  left: 12%;
+  // left: 30%;
+  right: 0;
+  top: 2%;
   position: absolute;
 `
 const Image = styled.img`
