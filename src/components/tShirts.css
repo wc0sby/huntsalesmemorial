@@ -1,33 +1,43 @@
 .shop {
+  margin: auto;
   display: grid;
   grid-template-rows: 5rem;
 }
 
 .ShirtGrid {
   margin-top: 1%;
-  grid-row: span 2;
+  grid-row: span 1;
   display: grid;
   grid-template-columns: 2fr;
-  grid-template-rows: auto;
+  grid-template-rows: 4fr;
   grid-column-gap: 0.5rem;
   grid-row-gap: 0.5rem;
 }
 
 .Box {
   background: rgba(68, 68, 68, 0.15);
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: row1-start;
+  grid-row-end: 3;
 }
 
 .CardGrid {
   display: grid;
   grid-template-columns: 8fr;
-  grid-template-rows: auto 100px;
+  /* grid-template-rows: 4fr; */
+  /* grid-template-rows: auto 100px; */
   grid-column-gap: 1%;
   grid-row-gap: 1rem;
 }
 
 .ShirtImg {
-  grid-column: span 2;
-  grid-row: span 1;
+  /* grid-column: span 1;
+  grid-row: span 1; */
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: row1-start;
+  grid-row-end: 3;
 
 }
 

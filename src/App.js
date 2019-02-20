@@ -1,102 +1,75 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import './App.css';
 import Nav from './components/nav'
-import Video from './components/media'
-import Page from './components/page'
+// import Video from './components/media'
 import CSSBaseline from '@material-ui/core/CssBaseline'
 // import Logo from './elements/shortLogo'
 import FullName from './elements/logo'
-import TShirt from "./components/tShirts";
+import TShirt from './components/tShirts'
+import Records from './components/records'
+import Page from './components/page'
+import Videos from './components/videoLibrary'
+import Gigs from './components/gigs'
 import './assets/Poster.png'
-
-
-
 
 class App extends Component {
   
   state = {
-    height: this.props.dimensions.height,
-    width: this.props.dimensions.width
+    selectedLink: '',
+    visible: false
   }
 
-  updateDimensions() {
-    if(window.innerWidth < 500) {
-      this.setState({ width: 450, height: 102 });
-    } else {
-      let update_width  = window.innerWidth;
-      let update_height = window.innerHeight;
-      this.setState({ width: update_width, height: update_height });
+  setVisibleState = (bool) => {
+    this.setState({visible:bool})
+  } 
+
+  componentWillUnmount = () => {
+    this.setState({visible: false})
+  }
+
+  getClickedLink = (e, data) => {
+    this.setState({selectedLink:data})
+  }
+
+  renderComponents = (selectedLink) => {
+    switch (selectedLink) {
+      case 'About':
+        return <Page id='page-active' action={this.setVisibleState} className={this.state.visible ? 'active' : 'deactive'}/>
+      case 'Shirts':
+        return <TShirt id='shirt-active' action={this.setVisibleState} className={this.state.visible ? 'active' : 'deactive'}/>
+      case 'Videos':
+        return <Videos id='video-active' action={this.setVisibleState} className={this.state.visible ? 'active' : 'deactive'}/>
+      case 'Gigs':
+        return <Gigs id='gig-active' action={this.setVisibleState} className={this.state.visible ? 'active' : 'deactive'}/>
+      case 'Records':
+        return <Records id='record-active' action={this.setVisibleState} className={this.state.visible ? 'active' : 'deactive'}/>
+      default:
+        return <FullName id='name-active' action={this.setVisibleState} className={this.state.visible ? 'active' : 'deactive'}/>
     }
-  }
-
-  componentDidMount() {
-    this.updateDimensions();
-    window.addEventListener("resize", this.updateDimensions.bind(this));
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateDimensions.bind(this));
-  }
-
-  renderPages=(pageArr)=> {
-    return pageArr.map((i,k)=>{
-
-      switch (i.name) {
-        case 'About':
-          return <Page 
-            height={this.state.height} 
-            width={this.state.width}
-            name={i.class}
-            key={k}  
-          />
-          // break;
-        case 'Gigs':
-         return <Page 
-          height={this.state.height} 
-          width={this.state.width}
-          name={i.class}
-          key={k}
-        />
-        // break;
-        case 'Shop':
-        return <TShirt/>
-        // break;
-    }})
-    
-    // if (pageArr){
-    //   return (pageArr.map((i,k)=>{
-    //     return i.name !== "Main"
-    //     ? (
-    //       <Page 
-    //         height={this.state.height} 
-    //         width={this.state.width}
-    //         name={i.class}
-    //         key={k}
-    //       />
-    //     )
-    //     : null
-    //   })
-    // )}
   }
 
   render() {
     const sectionsObj = [ 
       {
         class: 'main',
-        name: 'Main'
+        name: 'About'
+      },
+      {
+        class: 'main',
+        name: 'Videos'
+      },
+      {
+        class: 'main',
+        name: 'Gigs'
+      },
+      {
+        class: 'main',
+        name: 'Records'
       },
       {
         class: 'shop',
-        name: 'Shop'
+        name: 'Shirts'
       },
-      {
-        class: 'about',
-        name: 'About'
-      },
-      // {
-      //   class: 'gigs',
-      //   name: 'Gigs'
-      // },
     ]
 
     return (
@@ -104,14 +77,14 @@ class App extends Component {
         <CSSBaseline>
           <div style={{backgroundColor: 'brown', width: '100%'}} >
             <main className="main" name="main" >
-              <header className="App-header">
+              <section className="App-header">
                 {/* <Logo/>  */}
-                <FullName/> 
-                <Nav links={sectionsObj}/>
-                <Video />
-              </header>
-              {/* Render all pages relating to links */}
-              {this.renderPages(sectionsObj)}
+                <Nav 
+                  links={sectionsObj} 
+                  action={(e,data)=>this.getClickedLink(e,data)}
+                />
+                {this.renderComponents(this.state.selectedLink)}
+              </section>
 
             </main>
           </div>

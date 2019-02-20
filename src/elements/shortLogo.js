@@ -9,8 +9,8 @@ const Wrapper = styled.div`
   position: fixed;
 `
 const Image = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
 `
 
 const ShowLogo = props => (

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './tShirts.css';
 
 export default class PayPal extends Component{
   render(){
@@ -6,16 +7,23 @@ export default class PayPal extends Component{
       label:{
         color: 'white',
       },
+      form:{
+        height:'100%',
+        display:'flex',
+        flexDirection:'column',
+        justifyContent: 'space-around'
+      },
       button:{
-        margin: '2%'
+        // margin: '2%'
+        justifySelf: 'flex-start'
       }
     }
     return(
-      <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+      <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" style={styles.form}>
         <input type="hidden" name="cmd" value="_s-xclick"/>
         <input type="hidden" name="hosted_button_id" value={this.props.id}/>
       
-        <div>
+        <div >
           <div style={styles.label}>
             <input  type="hidden" name="on0" value="Size"/>Select Size
           </div>
@@ -28,7 +36,7 @@ export default class PayPal extends Component{
         </div>
 
         <input type="hidden" name="currency_code" value="USD"/>
-        <input disabled={true} style={styles.button} type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"/>
+        <input disabled={false} style={styles.button} type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"/>
         <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
       </form>
     )

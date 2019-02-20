@@ -26,15 +26,136 @@ body {
 }
 
 main {
-  text-align: center;
+  /* text-align: center; */
   background-image: url('./assets/Poster.png');
   background-size: cover;
   background-repeat: no-repeat;
   opacity: .85;
   /* background-position-y: -40mm; */
-  width:100%;
-  height: 100%;
+  /* width:100%; */
+  /* height: 100%; */
 }
+
+#name-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in-out; 
+}
+
+#name-active.active {
+  animation: opacity 0.2s ease;
+  opacity: 1;
+  /* margin: 'auto 15%' */
+
+  /* transition: all 500ms ease-in-out; */
+}
+
+#name-active.deactive {
+  opacity: 0;
+  animation: opacity 0.5s ease;
+  pointer-events:none;
+  /* transition: opacity 500ms ease-out; */
+}
+
+#record-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in-out; 
+}
+
+#record-active.active {
+  animation: opacity 0.2s ease;
+  opacity: 1;
+  /* margin: 'auto 15%' */
+
+  /* transition: all 500ms ease-in-out; */
+}
+
+#record-active.deactive {
+  opacity: 0;
+  animation: opacity 0.5s ease;
+  pointer-events:none;
+  /* transition: opacity 500ms ease-out; */
+}
+
+#gig-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in-out; 
+}
+
+#gig-active.active {
+  animation: opacity 0.2s ease;
+  opacity: 1;
+  /* margin: 'auto 15%' */
+
+  /* transition: all 500ms ease-in-out; */
+}
+
+#gig-active.deactive {
+  opacity: 0;
+  animation: opacity 0.5s ease;
+  pointer-events:none;
+  /* transition: opacity 500ms ease-out; */
+}
+
+#page-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in-out; 
+}
+
+#page-active.active {
+  animation: opacity 0.2s ease;
+  opacity: 1;
+  /* margin: 'auto 15%' */
+
+  /* transition: all 500ms ease-in-out; */
+}
+
+#page-active.deactive {
+  opacity: 0;
+  animation: opacity 0.5s ease;
+  pointer-events:none;
+  /* transition: opacity 500ms ease-out; */
+}
+
+#shirt-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in-out; 
+}
+
+#shirt-active.active {
+  animation: opacity 0.2s ease;
+  opacity: 1;
+  /* margin: 'auto 15%' */
+
+  /* transition: all 500ms ease-in-out; */
+}
+
+#shirt-active.deactive {
+  opacity: 0;
+  animation: opacity 0.5s ease;
+  pointer-events:none;
+  /* transition: opacity 500ms ease-out; */
+}
+
+#video-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in-out; 
+}
+
+#video-active.active {
+  animation: opacity 0.2s ease;
+  opacity: 1;
+  /* margin: 'auto 15%' */
+
+  /* transition: all 500ms ease-in-out; */
+}
+
+#video-active.deactive {
+  opacity: 0;
+  animation: opacity 0.5s ease;
+  pointer-events:none;
+  /* transition: opacity 500ms ease-out; */
+}
+
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -44,20 +165,27 @@ main {
 .App-header {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-start;
+  flex-direction: row;
+  /* align-items: flex-start; */
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
+  /* width: 100%; */
+}
+
+.App-container {
+  display: flex;
 }
 
 .App-link {
   color: #61dafb;
+  padding-bottom: 10%;
 }
 
 .about-me {
   background: rgba(68, 68, 68, 0.24);
-  
+  display: flex;
+  flex-direction: column;
 } 
 
 .about-me p {
