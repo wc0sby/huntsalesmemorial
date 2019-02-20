@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PayPal from './paypalButton'
+import './tShirts.css';
 
 export default class TshirtCard extends Component {
 

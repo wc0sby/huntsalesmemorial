@@ -1,20 +1,21 @@
 import React, { Component } from 'react'
-import { Link, animateScroll as Scroll } from 'react-scroll'
-
+import '../assets/THSM-Logo2.png'
 
 export default class Nav extends Component{
 
   renderLinks=(linkTextArr)=>{
     return (
       linkTextArr.map((i,k)=>{
-      return (<div 
+      return (<a 
           key={k} 
           href='#' 
           style={{'textDecoration':'none', 'color': 'white', 'padding':'10% 0', 'paddingLeft':'5%'}}>
-            <Link activeClass="active" className={`${i.class}`} to={i.class} spy={true} smooth={true} duration={1600} >
+            <div 
+              className={`${i.class}`} 
+              onClick={(e)=>this.props.action(e,i.name)} >
               {i.name}
-            </Link>
-        </div>
+            </div>
+        </a>
        )
       })
     )
@@ -23,25 +24,36 @@ export default class Nav extends Component{
   render(){
     const { links } = this.props
     const styles = {
+      container:{
+        'alignSelf': 'flex-start',
+        'width': '12%',
+      },
       main:{
         'fontFamily': `Didact Gothic, sans-serf`,
         'fontSize': '1.45em',
-        'width': '15%',
-        // 'opacity': '50%',
+        'width': '12%',
         'height': '100%',
         'background': 'rgba(0, 0, 0, 0.15)',
         'display': 'flex',
-        'flex-direction': 'column',
-        // 'justifyContent': 'space-between',
-        'align-content': 'flex-start',
-        'position': 'fixed'
+        'flexDirection': 'column',
+        'position': 'fixed',
+        'alignSelf': 'flex-start',
+        'justifyContent': 'center'
       },
+      logo:{
+        width: '100%',
+      }
     }
 
     return(
-      <nav style={styles.main}>
-        {this.renderLinks(links)}
-      </nav>
+      <div style={styles.container}>
+        <nav style={styles.main}>
+        <div style={styles.logo} onClick={(e)=>this.props.action(e,'')}>
+          <img src="../assets/THSM-Logo2.png" style={styles.logo} alt=''/>
+        </div>
+          {this.renderLinks(links)}
+        </nav>
+      </div>
     )
   }
 }

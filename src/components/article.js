@@ -12,7 +12,15 @@ export default class article extends Component{
         alignSelf: 'center'
       },
       link:{
-        textDecoration: 'none'
+        alignSelf: 'flex-end',
+        marginBottom: "2%",
+        background: '#ff9901',
+        color: 'white',
+        textAlign: 'center',
+        width: '30%',
+        textDecoration: 'none',
+        borderRadius: 6,
+        zIndex: 10,
       },
 
     }
@@ -30,7 +38,7 @@ export default class article extends Component{
         </div>
       </div>
       <p>{this.props.content}</p>
-      <a style={styles.link} href={this.props.srcLink}><span style={{color:'grey', alignSelf:'flex-end'}}>Read More</span></a>
+      <a style={styles.link} href={this.props.srcLink}><span>Read More</span></a>
       </article>
       // </div>
     )

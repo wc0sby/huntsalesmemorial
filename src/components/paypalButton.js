@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './tShirts.css';
 
 export default class PayPal extends Component{
   render(){
@@ -6,16 +7,23 @@ export default class PayPal extends Component{
       label:{
         color: 'white',
       },
+      form:{
+        height:'100%',
+        display:'flex',
+        flexDirection:'column',
+        justifyContent: 'space-around'
+      },
       button:{
-        margin: '2%'
+        // margin: '2%'
+        justifySelf: 'flex-start'
       }
     }
     return(
-      <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+      <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" style={styles.form}>
         <input type="hidden" name="cmd" value="_s-xclick"/>
         <input type="hidden" name="hosted_button_id" value={this.props.id}/>
       
-        <div>
+        <div >
           <div style={styles.label}>
             <input  type="hidden" name="on0" value="Size"/>Select Size
           </div>
